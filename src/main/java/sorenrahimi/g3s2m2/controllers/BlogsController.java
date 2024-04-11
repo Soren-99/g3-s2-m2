@@ -5,8 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import sorenrahimi.g3s2m2.entities.BlogPost;
+import sorenrahimi.g3s2m2.exceptions.NotFoundException;
 import sorenrahimi.g3s2m2.payloads.NewBlogPostPayload;
 import sorenrahimi.g3s2m2.services.BlogsService;
+
 
 import java.util.List;
 

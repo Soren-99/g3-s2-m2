@@ -1,11 +1,13 @@
 package sorenrahimi.g3s2m2.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import lombok.*;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Getter
 @Setter
@@ -13,6 +15,8 @@ import lombok.*;
 @Entity
 @Table(name = "blogposts")
 public class BlogPost {
+    @Id
+    @GeneratedValue
     private int id;
     private String category;
     private String title;

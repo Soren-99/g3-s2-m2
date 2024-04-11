@@ -6,9 +6,11 @@ import sorenrahimi.g3s2m2.entities.Author;
 import sorenrahimi.g3s2m2.entities.BlogPost;
 import sorenrahimi.g3s2m2.exceptions.NotFoundException;
 import sorenrahimi.g3s2m2.payloads.NewBlogPostPayload;
+import sorenrahimi.g3s2m2.repositories.AuthorsRepository;
 import sorenrahimi.g3s2m2.repositories.BlogsRepository;
 
-import java.util.List;
+
+import java.util.*;
 
 @Service
 public class BlogsService {
@@ -63,5 +65,4 @@ public class BlogsService {
         Author author = authorsService.findById(authorId);
         return blogsRepository.findByAuthor(author);
     }
-
 }
